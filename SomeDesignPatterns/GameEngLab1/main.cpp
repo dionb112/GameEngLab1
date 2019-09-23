@@ -12,8 +12,10 @@ int main() {
 	std::vector<Weapon*> weapons;
 	weapons.push_back(myFirstFactory->CreateLongAxe());
 	weapons.push_back(myFirstFactory->CreateRepeater());
-	for (Weapon* weapon : weapons) {
+	for (Weapon* weapon : weapons) 
+	{
 		weapon->draw();
+		delete weapon;
 	}
 	// Bridge Pattern
 	Draw* api = new DrawImpl();
@@ -22,6 +24,4 @@ int main() {
 	// Proxy Pattern
 	GraphicProxy graphicProxy;
 	graphicProxy.draw();
-
-
 }

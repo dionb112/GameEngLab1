@@ -9,5 +9,4 @@ public:
 	Weapon* CreateRepeater() {
 		return new Repeater;
 	}
-	
 };
